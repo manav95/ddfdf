@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>fddf</title>
+
+  
+</head><body>
+Welcome to the main site.<br>
+
+Here is where operators can access all functions that they require.<br>
+
+<br>
+
+<h2>Top Four abilities</h2>
+
+{% if operations %}
+<ul>
+
+{% for operation in operations %}
+  <p> 
+  </p><li><a href="/main/{{ operation.url }}">{{operation.name}}</a></li>
+  {% endfor %} 
+</ul>
+
+{% else %} <strong>No categories at present.</strong> {% endif %}
+</body></html>

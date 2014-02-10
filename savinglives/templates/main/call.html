@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>call</title>
+
+  
+</head><body>
+<h2>Who do you wish to call</h2>
+
+<br>
+
+<form id="category_form" method="post" action="/main/call/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text}}
+                {{ field }}
+            {% endfor %}
+
+            <input name="submit" value="CallNumber" type="submit">
+        </form>
+ <br>
+
+<br>
+
+
+</body></html>

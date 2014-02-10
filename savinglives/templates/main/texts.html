@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>texts</title>
+
+  
+</head><body>
+<h2>Viewing the texts</h2>
+
+Here are the texts sent and received.
+{% if finito %}
+<ul>
+{% for message in finito %}
+<p> 
+</p> <li> {{ message }} </li>
+  {% endfor %} 
+</ul><br>
+{% else %} <strong>No categories at present.</strong> {% endif %}
+
+<br>
+
+</body></html>

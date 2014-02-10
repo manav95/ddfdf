@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>send</title>
+
+  
+</head><body>
+<h2>Sending texts</h2>
+
+<br>
+
+Welcome to the place where you can send texts wherever you want
+<form id="category_form" method="post" action="/main/send/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text}}
+                {{ field }}
+            {% endfor %}
+
+            <input name="submit" value="SendText" type="submit">
+        </form>
+ <br>
+
+<br>
+</body></html>
